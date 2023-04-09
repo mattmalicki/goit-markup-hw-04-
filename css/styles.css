@@ -59,7 +59,7 @@ body {
 .page-footer .logo,
 .page-footer .logo:hover,
 .page-footer .logo:focus {
-  color: var(--white-color) !important;
+  color: var(--white-color);
 }
 
 .web {
@@ -85,7 +85,7 @@ body {
   color: var(--main-color);
 }
 .link:visited {
-  color: transparent;
+  color: inherit;
 }
 
 .link:hover,
@@ -98,7 +98,12 @@ body {
   background: url(../images/background-main.jpg),
     linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   color: var(--white-color);
+  background-position: center;
+  background-repeat: no-repeat;
   text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1600px;
 }
 
 .main-head {
@@ -222,6 +227,7 @@ body {
 
 ul {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   gap: 30px;
   padding: 0;
@@ -241,7 +247,8 @@ figure {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
