@@ -10,6 +10,8 @@
   --footer-mail-phone-color: rgba(256, 256, 256, 0.6);
   --border-color-one: #ececec;
   --border-color-two: #eeeeee;
+  --icons-color-one: #afb1b8;
+  --icons-background-footer: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -42,16 +44,22 @@ body {
 .page-footer {
   background: var(--third-backgroud-color);
   color: var(--white-color);
+}
+.page-footer .container {
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.03em;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 70px;
   min-height: 252px;
 }
 .page-footer .logo,
 .page-footer .logo:hover,
 .page-footer .logo:focus {
-  color: var(--white-color);
+  color: var(--white-color) !important;
 }
 
 .web {
@@ -61,6 +69,10 @@ body {
 .page-header .header-mail,
 .page-header .header-phone {
   color: var(--second-color);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
 }
 
 .page-footer .footer-mail,
@@ -82,7 +94,9 @@ body {
 }
 
 .main-studio {
-  background: var(--third-backgroud-color);
+  background-color: var(--third-backgroud-color);
+  background: url(../images/background-main.jpg),
+    linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   color: var(--white-color);
   text-align: center;
 }
@@ -189,6 +203,8 @@ body {
 .button-portfolio:focus {
   background: var(--functional-color);
   color: var(--white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-title {
@@ -275,6 +291,7 @@ figure {
 }
 
 .lorem-work .title {
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 
@@ -320,14 +337,149 @@ figure {
   flex-basis: calc((100% - 99px) / 3);
 }
 
+.portfolio-block .link:hover {
+  color: var(--main-color);
+}
+
 .portfolio-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+.portfolio-card:hover,
+.portfolio-card:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .portfolio-description {
   padding: 20px 23px;
   border: 1px solid var(--border-color-two);
   border-top: 0;
+}
+
+.icons {
+  fill: currentColor;
+}
+
+.envelope {
+  width: 19px;
+  height: 15px;
+}
+
+.smartphone {
+  width: 13px;
+  height: 19px;
+}
+
+.icon-block {
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.icon-block .icons {
+  width: 70px;
+  height: 70px;
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  padding-top: 16px;
+  padding-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons .socials {
+  color: var(--icons-color-one);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+}
+
+.social-icons .socials:hover,
+.social-icons .socials:focus {
+  color: var(--white-color);
+  background-color: var(--functional-color);
+  border-radius: 50%;
+}
+
+.social-icons .icons {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.social-icons .icons:hover,
+.social-icons .icons:focus {
+  fill: currentColor;
+}
+
+.clients .clients-head {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  padding-bottom: 50px;
+}
+
+.clients .list .client-logo {
+  width: 170px;
+  height: 92px;
+  border: solid 1px;
+  border-color: var(--icons-color-one);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--icons-color-one);
+}
+
+.clients .list .client-logo:hover,
+.clients .list .client-logo:focus {
+  color: var(--functional-color);
+  border-color: var(--functional-color);
+}
+
+.clients .list .client-logo .icons {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+}
+
+.connect-header {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.footer-socials .social-icons .socials {
+  color: var(--white-color);
+  background-color: var(--icons-background-footer);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.footer-socials .social-icons .socials:hover,
+.footer-socials .social-icons .socials:focus {
+  color: var(--white-color);
+  background-color: var(--functional-color);
+  border-radius: 50%;
 }
