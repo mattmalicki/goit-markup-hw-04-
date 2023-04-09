@@ -306,6 +306,15 @@ figure {
   margin-top: 94px;
 }
 
+.lorem-work .list {
+  display: flex;
+  gap: 30px;
+}
+
+.lorem-work .list li {
+  flex-basis: calc((100% - 90px) / 4);
+}
+
 .team-card {
   display: flex;
   flex-direction: column;
