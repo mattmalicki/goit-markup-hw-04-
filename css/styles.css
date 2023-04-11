@@ -38,6 +38,10 @@ figure {
   margin: 0;
 }
 
+.button {
+  outline: none;
+}
+
 .section {
   padding: 94px;
 }
@@ -170,6 +174,7 @@ figure {
 /* LINKS */
 
 .link {
+  outline: none;
   text-decoration: none;
   color: var(--main-color);
 }
