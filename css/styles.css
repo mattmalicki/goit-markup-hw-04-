@@ -188,15 +188,23 @@ figure {
 
 .main-studio {
   background-color: var(--third-backgroud-color);
-  background: url(../images/background-main.jpg),
-    linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   color: var(--white-color);
-  background-position: center;
-  background-repeat: no-repeat;
   text-align: center;
   margin: 0 auto;
   width: 100%;
-  max-width: 1600px;
+}
+
+.main-background {
+  width: 100%;
+  background: linear-gradient(
+      to top,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/background-main.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1600px;
 }
 
 .main-head {
@@ -300,10 +308,7 @@ figure {
 
 .team-description {
   background: var(--white-color);
-  min-height: 108px;
   padding-top: 30px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 .team .team-card .team-description .team-name {
@@ -327,6 +332,9 @@ figure {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 /* CLIENT SECTION */
@@ -393,24 +401,21 @@ figure {
   gap: 30px;
 }
 
-.portfolio-block .list .card {
+.portfolio-block .list .list-card {
   flex-basis: calc((100% - 99px) / 3);
 }
 
-.portfolio-block .link:hover {
+.portfolio-block .link:hover .portfolio-card,
+.portfolio-block .link:focus .portfolio-card {
   color: var(--main-color);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.portfolio-card:hover,
-.portfolio-card:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-description {
@@ -430,17 +435,10 @@ figure {
 }
 
 /* icons in header */
-.envelope {
-  width: 19px;
-  height: 15px;
-}
+
 /* i know those are wrong values
     but with those icons looks like in figma
- */
-.smartphone {
-  width: 13px;
-  height: 19px;
-}
+*/
 
 /* icons in LOREM SECTION */
 .icon-block {
@@ -450,11 +448,6 @@ figure {
   border-radius: 4px;
   text-align: center;
   padding-top: 25px;
-}
-
-.icon-block .icons {
-  width: 70px;
-  height: 70px;
 }
 
 /* icons in TEAM CARDS */
@@ -478,24 +471,7 @@ and background as a circle */
   align-items: center;
   width: 44px;
   height: 44px;
-}
-
-.social-icons .socials:hover,
-.social-icons .socials:focus {
-  color: var(--white-color);
-  background-color: var(--functional-color);
   border-radius: 50%;
-}
-
-.social-icons .icons {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-}
-
-.social-icons .icons:hover,
-.social-icons .icons:focus {
-  fill: currentColor;
 }
 
 /* icons in CLIENTS SECTION */
@@ -518,15 +494,15 @@ and background as a circle */
   border-color: var(--functional-color);
 }
 
-.clients .list .client-logo .icons {
+/* .clients .list .client-logo .icons {
   width: 106px;
   height: 60px;
   fill: currentColor;
-}
+} */
 
 /* icons in FOOTER SECTION */
 
-.footer-socials .social-icons .socials {
+.footer-socials .socials {
   color: var(--white-color);
   background-color: var(--icons-background-footer);
   display: flex;
@@ -537,9 +513,9 @@ and background as a circle */
   border-radius: 50%;
 }
 
-.footer-socials .social-icons .socials:hover,
-.footer-socials .social-icons .socials:focus {
+/* social icons in footer and team cards */
+.social-icons .socials:hover,
+.social-icons .socials:focus {
   color: var(--white-color);
   background-color: var(--functional-color);
-  border-radius: 50%;
 }
