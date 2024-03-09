@@ -1,4 +1,4 @@
-# goit-markup-hw-02
+# goit-markup-hw-04
 
 Fourth homework in HTML/CSS module in GoIT course.
 
